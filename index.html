@@ -13,26 +13,84 @@
         }
         h1 {
             color: #5cb85c;
+            text-align: center;
+            margin-bottom: 30px;
         }
         .container {
-            max-width: 800px;
+            max-width: 960px;
             margin: auto;
             background: white;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        p {
-            line-height: 1.6;
+        .cuisine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .cuisine-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .cuisine-item:hover {
+            transform: translateY(-5px);
+        }
+        .cuisine-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .cuisine-item h3 {
+            margin: 15px 0 10px;
+            color: #333;
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+        .cuisine-item p {
+            font-size: 0.9em;
+            color: #666;
+            padding: 0 10px 15px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Cuisine Page!</h1>
-        <p>This is where I'll showcase all the delicious cuisines I've made.</p>
-        <p>Stay tuned for mouth-watering recipes and photos!</p>
-        <!-- Add your cuisine content here -->
+        <h1>My Culinary Creations</h1>
+        <p style="text-align: center; margin-bottom: 30px;">Explore the delicious dishes I've prepared!</p>
+        
+        <div class="cuisine-grid">
+            <!-- Cuisine Item 1 -->
+            <div class="cuisine-item">
+                <img src="https://via.placeholder.com/400x200?text=Cuisine+1" alt="Cuisine 1">
+                <h3>Spicy Ramen Bowl</h3>
+                <p>A classic ramen with a fiery kick, homemade broth, and tender pork belly.</p>
+            </div>
+            
+            <!-- Cuisine Item 2 -->
+            <div class="cuisine-item">
+                <img src="https://via.placeholder.com/400x200?text=Cuisine+2" alt="Cuisine 2">
+                <h3>Mediterranean Mezze Platter</h3>
+                <p>A vibrant assortment of hummus, tabbouleh, falafel, and warm pita bread.</p>
+            </div>
+            
+            <!-- Cuisine Item 3 -->
+            <div class="cuisine-item">
+                <img src="https://via.placeholder.com/400x200?text=Cuisine+3" alt="Cuisine 3">
+                <h3>Decadent Chocolate Cake</h3>
+                <p>Rich, moist chocolate cake with a velvety ganache, perfect for any celebration.</p>
+            </div>
+
+            <!-- Add more cuisine items here following the same structure -->
+            
+        </div>
     </div>
 </body>
 </html>
